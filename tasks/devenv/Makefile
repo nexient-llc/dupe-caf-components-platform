@@ -113,7 +113,7 @@ platform/devenv/configure-global-pkgs:
 
 .PHONY: platform/devenv/configure-docker-buildx
 platform/devenv/configure-docker-buildx:
-	docker buildx create --use
+	-$(DOCKER) buildx create --use
 
 # Target to add asdf plugins listed in .tool-versions
 # this doesn't work to actually install and use asdf in the same make iteration since asdf 
